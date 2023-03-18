@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Botões aleatórios</title>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			background-color: #f2f2f2;
+		}
+		
+		button {
+			background-color: red;
+			color: white;
+			font-size: 24px;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			margin: 10px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Ola Cintya Gabrielli</h1>
+	<p>Vc aceita namorar comigo?</p>
+	<button id="btn1">Sim</button>
+	<button id="btn2">Nao</button>
+	
+	<script>
+		let btn2 = document.querySelector("#btn2");
+		
+		btn2.addEventListener("click", function() {
+			btn2.style.position = "absolute";
+			btn2.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
+			btn2.style.top = Math.floor(Math.random() * window.innerHeight) + "px";
+		});
+		
+		let btn1 = document.querySelector("#btn1");
+		
+		btn1.addEventListener("click", function() {
+			alert("Hehehe perfeito!");
+		});
+	</script>
+</body>
+</html>
